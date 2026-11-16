@@ -19,7 +19,6 @@ endif()
 #-- Run onx.py at build time to generate baz.cpp
 # The script runs when bar.cpp is missing or its dependencies
 # change, not on every build. For a command that should run
-# every build, use add_custom_target(... ALL COMMAND ...) instead.
 add_custom_command(
   OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/baz.cpp"
   COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/onx.py" "${CMAKE_CURRENT_BINARY_DIR}/baz.cpp" "build_phase"
